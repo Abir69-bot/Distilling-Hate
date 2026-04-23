@@ -177,3 +177,8 @@ https://github.com/AridHasan/blp25_task1
 
 Hate speech detection systems carry significant societal risks, including false positives that may disproportionately affect marginalized groups.
 We intentionally avoid naive data-level oversampling and instead rely on loss-aware training and knowledge distillation to better reflect real-world data distributions.
+
+## 📄 License
+
+This project is licensed under the MIT License.  
+See the LICENSE file for details.
