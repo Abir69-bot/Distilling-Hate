@@ -31,7 +31,7 @@ The resulting student model contains **only 13.7M parameters** and achieves comp
 <p align="center">
   <img src="figures/archi.png" width="85%">
 </p>
-
+Architecture of the proposed knowledge distillation training setup. Given a text sequence x, we first apply normalization and then tokenize it separately for the teacher and student encoders. The teacher BERT is initially trained on y using focal loss and subsequently frozen. During distillation, the frozen teacher produces (i) temperature-scaled logits for soft-target supervision and (ii) final-layer CLS representations. The student model is optimized using three objectives: a supervised loss on y (CrossEntropy or Focal, depending on configuration), a Kullback–Leibler divergence between teacher and student logits, and an MSE alignment loss computed between the student CLS representation and a projected teacher CLS representation. Only the student parameters are updated during this stage.
 **Training procedure**
 1. Train a high-capacity **BanglaBERT Large** teacher using focal loss.
 2. Freeze the teacher model.
